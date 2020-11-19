@@ -367,6 +367,17 @@ const LAYER_DATA = {
 		getAmt() { return player.hs.points },
 		shown() { return player.mb.unl },
 	},
+	mo: {
+		branches: ["ma", "ge"],
+		getReq() { return new Decimal(1e200) },
+		res: "machine power",
+		type: "normal",
+		exp: new Decimal(.0075),
+		row: 8,
+		amtName: "hyperspace energy",
+		getAmt() { return player.hs.points },
+		shown() { return player.mb.unl },
+	},
 }
 
 function rowReset(row, layer) {
